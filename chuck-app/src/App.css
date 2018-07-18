@@ -3,13 +3,21 @@
   width: 100%;
   height: auto;
 
+
 }
 
 .App-header {
   text-align: center;
-  height: 150px;
+  width: 100%;
+  height: auto;
   padding: 20px;
   position: relative;
+  color: white;
+  background: rgba(179,220,237,1);
+  background: -moz-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 53%, rgba(188,224,238,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(179,220,237,1)), color-stop(53%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+  background: -webkit-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 53%, rgba(188,224,238,1) 100%);
+  font-weight: 900;
 }
 
 .App-intro {
@@ -28,7 +36,7 @@
 
 
 .search-container {
-  margin-top: 12em;
+  margin-top: 2em;
   position: relative;
 }
 
