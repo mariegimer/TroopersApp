@@ -14,7 +14,8 @@ class SearchContainer extends Component {
         this.handleClick = this.handleClick.bind(this)
     }
 
-    handleClick() {
+    handleClick(e) {
+        e.preventDefault();
         axios.get('https://api.chucknorris.io/jokes/random')
             .then((response) => {
                 this.setState({username: response.data.value})
@@ -26,13 +27,14 @@ class SearchContainer extends Component {
         return (
             <div>
                 <div className="search-container">
-                    <form action="#">
+                    <form action="#" method="get">
                         <input type="text" placeholder="Search.." onChange={this.searchBar} name="search" />
-                        <button onClick={this.handleClick()}>Rechercher</button>
-                        </form>
+                        <button >Rechercher</button>
+                    </form>
                 </div>
+                <button className="click" onClick={this.handleClick}>Click Moi !</button>
 
-                    <p>{this.state.username}</p>
+                <p className="result">{this.state.username}</p>
                 <Results/>
             </div>
         )

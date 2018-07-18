@@ -57,3 +57,23 @@
   border: 2px solid white;
 
 }
+
+.result {
+  margin: 3em 0;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  border: 2px solid #dddddd;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.click {
+  margin-top: 5em;
+  padding: 10px 10px;
+  background-color: #eb4d4b;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid white;
+}
