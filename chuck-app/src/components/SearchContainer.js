@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../App.css';
-import Results from "./Results";
+import Gif from "./Gif";
 
 
 class SearchContainer extends Component {
@@ -9,7 +9,10 @@ class SearchContainer extends Component {
 
     constructor() {
         super();
-        this.state = {username: []};
+        this.state = {
+            value: [],
+            url: []
+        };
 
         this.handleClick = this.handleClick.bind(this)
     }
@@ -18,7 +21,8 @@ class SearchContainer extends Component {
         e.preventDefault();
         axios.get('https://api.chucknorris.io/jokes/random')
             .then((response) => {
-                this.setState({username: response.data.value})
+                this.setState({url: response.data.url})
+                this.setState({value: response.data.value})
             })
     };
 
@@ -34,8 +38,15 @@ class SearchContainer extends Component {
                 </div>
                 <button className="click" onClick={this.handleClick}>Click Moi !</button>
 
-                <p className="result">{this.state.username}</p>
-                <Results/>
+                <div className="result">
+                    <p><strong>The punchline is : </strong> {this.state.value}</p>
+                    <p><strong>URL :</strong>  {this.state.url}</p>
+                    <Gif/>
+                </div>
+
+                <footer>
+                    <p>© Marie Gimer 2018</p>
+                </footer>
             </div>
         )
     }

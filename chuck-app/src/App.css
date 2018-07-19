@@ -24,20 +24,12 @@
   font-size: large;
 }
 
-.tile {
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-  background: salmon;
-  float: left;
-  font-size: 11px;
-  text-align: left;
-}
-
 
 .search-container {
   margin-top: 2em;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .search-container input {
@@ -59,14 +51,12 @@
 }
 
 .result {
-  margin: 3em 0;
+  margin-top: 2em;
   width: 50%;
   margin-right: auto;
   margin-left: auto;
   display: block;
-  border: 2px solid #dddddd;
-  padding: 15px;
-  border-radius: 3px;
+
 }
 
 .click {
@@ -76,4 +66,21 @@
   color: white;
   border-radius: 5px;
   border: 2px solid white;
+}
+
+.gif {
+  margin: 2em 0;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #535c68;
+  color: white;
+}
+
+footer p {
+  font-size: 0.8em;
+  margin: 0 auto;
+  padding: 15px 0;
 }
